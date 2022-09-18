@@ -1,0 +1,94 @@
+body {
+    background-color: white;
+    height: 90vh;
+    margin: 0%;
+}
+
+#grid {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    place-items: center;
+}
+
+#header {
+    background-color: gray;
+    text-align: center;
+}
+
+#title {
+    background-color: gray;
+    grid-column: 1 / 4;
+}
+
+#footer {
+    background-color: gray;
+    grid-column: 1 / 4;
+}
+
+
+#info {
+    display: flex;
+    text-align: center;
+}
+
+
+#status {
+    text-align: center;
+}
+
+.card {
+    background-color: green;
+    width: 100%;
+    height: 100%;
+}
+
+.back {
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    width: fit-content;
+    display: block;
+    margin: 5px;
+    padding: 5px;
+    font-weight: bold;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+@media (max-width: 500px) {
+    body {
+        background-color: aqua;
+    }
+
+    #grid {
+        width: 80%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr) ;
+        grid-gap: 10px;
+        place-items: center;
+    }
+
+    #title {
+        background-color: gray;
+        grid-column: 1;
+    }
+    
+    #footer {
+        background-color: gray;
+        grid-column: 1;
+    }
+
+    .card {
+        background-color: green;
+        width: 100%;
+        height: 100%;
+    }
+
+}

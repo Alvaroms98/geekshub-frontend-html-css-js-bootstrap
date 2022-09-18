@@ -1,0 +1,40 @@
+input { 
+    text-align: right; 
+    width: 90%;
+}
+
+#calculadora {
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+
+#formula {
+    grid-column: 1 / 5;
+}
+
+.btn {
+    width: 90%;
+    height: 90%;
+}
+
+.back {
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    width: fit-content;
+    display: block;
+    margin: 5px;
+    padding: 5px;
+    font-weight: bold;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.back:hover {
+    color: black
+}

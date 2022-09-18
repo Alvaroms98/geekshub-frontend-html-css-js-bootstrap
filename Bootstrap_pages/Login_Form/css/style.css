@@ -1,0 +1,80 @@
+
+body {
+    background-image: url('../../../assets/estructura-abstracta-3d-gris-oscuro-3593.jpg');
+    background-size:     cover;                      /* <------ */
+    background-repeat:   repeat;
+    background-position: center center;
+}
+
+.back {
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    width: fit-content;
+    display: block;
+    margin: 5px;
+    padding: 5px;
+    font-weight: bold;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.back:hover {
+    color: black;
+}
+
+main {
+    width: 50vw;
+    margin: auto;
+}
+
+.title {
+    color: white;
+}
+
+.description {
+    color: white;
+}
+
+.form-header {
+    background-color: white;
+    border-top-left-radius: 1%;
+    border-top-right-radius: 1%;
+}
+
+.form-body {
+    background-color: rgb(185, 185, 185);
+}
+
+
+.inputs {
+    display: block;
+    width: 95%;
+    margin: 8px auto 8px;
+}
+
+.social-buttons {
+    padding: 1px;
+}
+
+#lock-icon {
+    width: 15%;
+}
+
+#login-btn {
+    background-color: rgb(0, 163, 136);
+    border-color: rgb(0, 163, 136);
+}
+
+img {
+    max-width:100%;
+    max-height:100%;
+}
+
+
+@media (max-width: 768px) { 
+    main {
+        width: 90vw;
+        margin: auto;
+    }
+}

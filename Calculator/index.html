@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div>
+        <a href="../index.html" class="back" role="button">Back</a>
+    </div>
+    <h1 id="titulo" class="text-center my-5">Calculadora Básica</h1>
+    <div id="calculadora">
+        <div id="formula">
+            <input type="text" name="" placeholder="" id="formula-input">
+        </div>
+        <div class="button">
+            <button onclick="insert(1)" type="button" class="btn btn-primary">1</button>
+        </div>
+        <div class="button">
+            <button onclick="insert(2)" type="button" class="btn btn-primary">2</button>
+        </div>
+        <div class="button">
+            <button onclick="insert(3)" type="button" class="btn btn-primary">3</button>
+        </div>
+        <div class="button">
+            <button onclick="insert('+')" type="button" class="btn btn-primary">+</button>
+        </div>
+        <div class="button">
+            <button onclick="insert(4)" type="button" class="btn btn-primary">4</button>
+        </div>
+        <div class="button">
+            <button onclick="insert(5)" type="button" class="btn btn-primary">5</button>
+        </div>
+        <div class="button">
+            <button onclick="insert(6)" type="button" class="btn btn-primary">6</button>
+        </div>
+        <div class="button">
+            <button onclick="insert('-')" type="button" class="btn btn-primary">-</button>
+        </div>
+        <div class="button">
+            <button onclick="insert(7)" type="button" class="btn btn-primary">7</button>
+        </div>
+        <div class="button">
+            <button onclick="insert(8)" type="button" class="btn btn-primary">8</button>
+        </div>
+        <div class="button">
+            <button onclick="insert(9)" type="button" class="btn btn-primary">9</button>
+        </div>
+        <div class="button">
+            <button onclick="insert('*')" type="button" class="btn btn-primary">*</button>
+        </div>
+        <div class="button">
+            <button onclick="insert(0)" type="button" class="btn btn-primary">0</button>
+        </div>
+        <div class="button">
+            <button onclick="insert('.')" type="button" class="btn btn-primary">.</button>
+        </div>
+        <div class="button">
+            <button onclick="clean()" type="button" class="btn btn-primary">C</button>
+        </div>
+        <div class="button">
+            <button onclick="resolve()" type="button" class="btn btn-primary">=</button>
+        </div>
+    </div>
+</body>
+
+</html>

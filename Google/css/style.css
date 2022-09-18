@@ -1,0 +1,60 @@
+body {
+    background-color: white;
+    margin: 0 0 0 0;
+}
+
+
+div {
+    width: 99vw;
+}
+
+#header {
+    display: flex;
+    height: 5vh;
+}
+
+#header-left {
+    align-content: left;
+    width: 50%;
+    
+}
+
+#header-right {
+    text-align: right;
+    width: 50%
+}
+
+#main-content {
+    height: 85vh;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+
+img {
+    width: 40%;
+}
+
+#footer {
+    height: 5vh;
+    text-align: left;
+}
+
+.back {
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    width: fit-content;
+    display: block;
+    margin: 5px;
+    padding: 5px;
+    font-weight: bold;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.back:hover {
+    color: black
+}
