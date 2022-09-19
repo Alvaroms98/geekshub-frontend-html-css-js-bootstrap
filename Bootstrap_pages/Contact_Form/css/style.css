@@ -70,6 +70,10 @@ main {
     color: rgb(0, 153, 255);
 }
 
+.icon i {
+    font-size:x-large
+}
+
 .input {
     flex-grow: 2;
     font-size: small;
@@ -87,6 +91,11 @@ main {
     .main-box {
         width: 80%;
         height: 70%;
+    }
+
+    .field {
+        padding-left: 0%;
+        padding-right: 0%;
     }
 }
 
