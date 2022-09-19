@@ -1,0 +1,109 @@
+.back {
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    width: fit-content;
+    display: block;
+    margin: 5px;
+    padding: 5px;
+    font-weight: bold;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.back:hover {
+    color: black;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 90vh;
+    margin: auto;
+}
+
+.main-box {
+    background-color: rgb(240, 240, 240);
+    width: 60vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px;
+    border-style: solid;
+    border-color: rgb(215, 215, 215);
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-color: rgb(215, 215, 215);
+    color: rgb(0, 153, 255);
+}
+
+.form {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.field {
+    display: flex;
+    margin: 5px;
+    width: 100%;
+    justify-content: center;
+    padding-left: 12%;
+    padding-right: 2%;
+}
+
+.icon {
+    margin-right: 10px;
+    color: rgb(0, 153, 255);
+}
+
+.input {
+    flex-grow: 2;
+    font-size: small;
+}
+
+.submit {
+    margin-top: 5px;
+}
+
+.message {
+    flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+    .main-box {
+        width: 80%;
+        height: 70%;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-box {
+        width: 100%;
+        height: 70%;
+    }
+
+    .field {
+        margin: 5px;
+        width: 100%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .icon {
+        display: none;
+    }
+}
