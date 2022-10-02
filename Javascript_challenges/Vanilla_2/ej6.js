@@ -20,28 +20,16 @@ const userRequest = (question) => {
     });
 };
 
-const isPrime = (number) => {
-    let multiples = [number];
-    for (let i = number-1; i > 0; i--) {
-        if (number % i === 0) {
-            multiples.push(i);
-        }
-    }
-    if (multiples.length === 2) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
 const main = async () => {
-    const number = parseInt(await userRequest("Choose number"));
-
-    if (isPrime(number)) {
-        console.log(`${number} is prime!`);
-    } else {
-        console.log(`${number} is not prime`);
+    let number = parseInt(await userRequest("Choose number"));
+    const first = number;
+    let numDigits = 0;
+    while (number >= 1) {
+        number /= 10;
+        numDigits++;
     }
+
+    console.log(`"${first}" has ${numDigits} digits.`);
 }
 
 main();

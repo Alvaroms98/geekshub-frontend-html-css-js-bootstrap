@@ -20,27 +20,25 @@ const userRequest = (question) => {
     });
 };
 
-const isPrime = (number) => {
-    let multiples = [number];
-    for (let i = number-1; i > 0; i--) {
-        if (number % i === 0) {
-            multiples.push(i);
-        }
-    }
-    if (multiples.length === 2) {
-        return true;
-    } else {
-        return false;
-    }
+const setValue = (array, pos, value) => {
+    array[pos] = value;
+}
+
+const getValue = (array, pos) => {
+    console.log(`Value of position ${pos} = ${array[pos]}`);
 }
 
 const main = async () => {
-    const number = parseInt(await userRequest("Choose number"));
-
-    if (isPrime(number)) {
-        console.log(`${number} is prime!`);
-    } else {
-        console.log(`${number} is not prime`);
+    let array = [];
+    for (let i = 0; i < 10; i++) {
+        array.push(0);
+    }
+    for (let i in array) {
+        const value = parseFloat(await userRequest(`Value of position ${i}`));
+        setValue(array, i, value);
+    }
+    for (let i in array) {
+        getValue(array, i);
     }
 }
 

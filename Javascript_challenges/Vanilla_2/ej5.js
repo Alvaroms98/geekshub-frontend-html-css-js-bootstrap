@@ -20,28 +20,19 @@ const userRequest = (question) => {
     });
 };
 
-const isPrime = (number) => {
-    let multiples = [number];
-    for (let i = number-1; i > 0; i--) {
-        if (number % i === 0) {
-            multiples.push(i);
-        }
+const numToBin = (number) => {
+    if (number === 1) {
+        return '1'
     }
-    if (multiples.length === 2) {
-        return true;
-    } else {
-        return false;
-    }
+    let reminder = number % 2
+    let newNum = parseInt(number / 2)
+    return numToBin(newNum) + reminder.toString()
 }
 
 const main = async () => {
     const number = parseInt(await userRequest("Choose number"));
 
-    if (isPrime(number)) {
-        console.log(`${number} is prime!`);
-    } else {
-        console.log(`${number} is not prime`);
-    }
+    console.log(`Binary representation of ${number} = b${numToBin(number)}`);
 }
 
 main();

@@ -1,5 +1,4 @@
 const readline = require("readline");
-const { isPrimitive } = require("util");
 
 const inputInterface = readline.createInterface({
     input: process.stdin,
