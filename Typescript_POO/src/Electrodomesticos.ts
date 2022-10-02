@@ -1,4 +1,4 @@
-enum Colores {
+export enum Colores {
     Blanco = 'BLANCO',
     Negro = 'NEGRO',
     Rojo = 'ROJO',
@@ -6,7 +6,7 @@ enum Colores {
     Gris = 'GRIS'
 };
 
-enum Consumo {
+export enum Consumo {
     A = 'A',
     B = 'B',
     C = 'C',
@@ -96,7 +96,7 @@ abstract class Electrodomestico {
     }
 }
 
-class Lavadora extends Electrodomestico {
+export class Lavadora extends Electrodomestico {
     carga: number;
 
     static CARGA_DEFAULT: number = 5;
@@ -111,11 +111,54 @@ class Lavadora extends Electrodomestico {
         this.carga = carga;
     }
 
-    override precioFinal(): number {
-        
+    public override precioFinal(): number {
+        let precio: number = super.precioFinal();
+        if (this.carga > 30) {
+            precio += 50;
+        }
+        return precio;
     }
 
     get Carga(): number {
         return this.carga;
+    }
+}
+
+export class Television extends Electrodomestico {
+    resolucion: number;
+    cuatroK: boolean;
+
+    static RESOLUCION_DEFAULT: number = 20;
+    static CUATROK_DEFAULT: boolean = false;
+
+    constructor(
+        color: string=Electrodomestico.COLOR_DEFAULT,
+        consumo: string=Electrodomestico.CONSUMO_DEFAULT,
+        peso: number=Electrodomestico.PESO_DEFAULT,
+        resolucion: number=Television.RESOLUCION_DEFAULT,
+        cuatroK: boolean=Television.CUATROK_DEFAULT
+    ) {
+        super(color, consumo, peso);
+        this.resolucion = resolucion;
+        this.cuatroK = cuatroK;
+    }
+
+    public override precioFinal(): number {
+        let precio: number = super.precioFinal();
+        if (this.resolucion > 40) {
+            precio += precio * 0.3;
+        }
+        if (this.cuatroK) {
+            precio += 50;
+        }
+        return precio;
+    }
+
+    get CuatroK(): boolean {
+        return this.cuatroK;
+    }
+
+    get Resolucion(): number {
+        return this.resolucion;
     }
 }
