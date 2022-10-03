@@ -1,9 +1,9 @@
 export enum Colores {
-    Blanco = 'BLANCO',
-    Negro = 'NEGRO',
-    Rojo = 'ROJO',
-    Azul = 'AZUL',
-    Gris = 'GRIS'
+    Blanco = 'Blanco',
+    Negro = 'Negro',
+    Rojo = 'Rojo',
+    Azul = 'Azul',
+    Gris = 'Gris'
 };
 
 export enum Consumo {
@@ -15,7 +15,7 @@ export enum Consumo {
     F = 'F'
 };
 
-abstract class Electrodomestico {
+export abstract class Electrodomestico {
     private color: string;
     private consumo: string;
     private peso: number;
@@ -35,7 +35,7 @@ abstract class Electrodomestico {
         this.peso = peso;
     }
 
-    public precioFinal(): number {
+    protected precioFinal(): number {
         let precio: number = Electrodomestico.PRECIO_BASE;
 
         const consumosDict: Map<string, number> = new Map<string, number>([
@@ -72,7 +72,6 @@ abstract class Electrodomestico {
 
     private comprobarColor(color: string): string {
         let result: string = Electrodomestico.COLOR_DEFAULT;
-        color = color.toUpperCase();
         if (color in Colores) {
             result = color;
         }
@@ -97,7 +96,7 @@ abstract class Electrodomestico {
 }
 
 export class Lavadora extends Electrodomestico {
-    carga: number;
+    private carga: number;
 
     static CARGA_DEFAULT: number = 5;
 
@@ -111,7 +110,7 @@ export class Lavadora extends Electrodomestico {
         this.carga = carga;
     }
 
-    public override precioFinal(): number {
+    protected override precioFinal(): number {
         let precio: number = super.precioFinal();
         if (this.carga > 30) {
             precio += 50;
@@ -125,8 +124,8 @@ export class Lavadora extends Electrodomestico {
 }
 
 export class Television extends Electrodomestico {
-    resolucion: number;
-    cuatroK: boolean;
+    private resolucion: number;
+    private cuatroK: boolean;
 
     static RESOLUCION_DEFAULT: number = 20;
     static CUATROK_DEFAULT: boolean = false;
@@ -143,7 +142,7 @@ export class Television extends Electrodomestico {
         this.cuatroK = cuatroK;
     }
 
-    public override precioFinal(): number {
+    protected override precioFinal(): number {
         let precio: number = super.precioFinal();
         if (this.resolucion > 40) {
             precio += precio * 0.3;
